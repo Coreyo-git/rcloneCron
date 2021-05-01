@@ -39,8 +39,8 @@ fi
 if [ "$cchange" == true ] && [ "$lchange" == true ];
 then
     zenity --info --title "Hello" --text "Cronjob onedrive error syncing"
-    sudo rm /home/coreyo/scirpts/cloudlog.txt
-    sudo rm /home/coreyo/scripts/locallog.txt
+    rm /home/coreyo/scirpts/cloudlog.txt
+    rm /home/coreyo/scripts/locallog.txt
     exit 0
 fi
 
@@ -49,8 +49,8 @@ if [ "$cchange" == true ] && [ "$lchange" == false ];
 then
     echo "Preparing sync.."
     sync.sh
-    sudo rm /home/coreyo/scirpts/cloudlog.txt
-    sudo rm /home/coreyo/scripts/locallog.txt
+    rm /home/coreyo/scirpts/cloudlog.txt
+    rm /home/coreyo/scripts/locallog.txt
 fi
 
 #if local has changed prepare sync
@@ -58,6 +58,6 @@ if [ "$lchange" == true ] && [ "$cchange" == false ];
 then 
     echo "Preparing copy"
     copy.sh
-    sudo rm /home/coreyo/scirpts/cloudlog.txt
-    sudo rm /home/coreyo/scripts/locallog.txt
+    rm /home/coreyo/scirpts/cloudlog.txt
+    rm /home/coreyo/scripts/locallog.txt
 fi
